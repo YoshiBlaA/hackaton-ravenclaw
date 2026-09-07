@@ -5,141 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="./css/welcome.css">
-
     <title>Fondo Animado de Ravenclaw</title>
-   
-    <style>
-        /* 1. Configuración del espacio y fondo mágico degradado */
-        main, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background: linear-gradient(135deg, #0d1e4a, #213264, #000000);
-            background-size: 400% 400%;
-            animation: gradientMovement 15s ease infinite;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-            font-family: 'Cinzel', 'Georgia', serif;
-        }
-
-        /* Animación para el movimiento suave del fondo */
-        @keyframes gradientMovement {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* 2. Contenedor de partículas flotantes (Sabiduría/Magia) */
-        .magic-particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            bottom: -20px;
-            background: radial-gradient(circle, rgba(234,180,55,1) 0%, rgba(148,107,45,0) 70%); /* Color Bronce/Oro */
-            border-radius: 50%;
-            animation: floatUp 8s infinite linear;
-            opacity: 0;
-        }
-
-        /* Generación de variaciones de partículas con CSS puro */
-        .particle:nth-child(1) { left: 10%; width: 8px; height: 8px; animation-delay: 0s; animation-duration: 6s; }
-        .particle:nth-child(2) { left: 25%; width: 12px; height: 12px; animation-delay: 2s; animation-duration: 9s; background: #946a2d; }
-        .particle:nth-child(3) { left: 40%; width: 6px; height: 6px; animation-delay: 4s; animation-duration: 7s; }
-        .particle:nth-child(4) { left: 55%; width: 14px; height: 14px; animation-delay: 1s; animation-duration: 11s; }
-        .particle:nth-child(5) { left: 70%; width: 10px; height: 10px; animation-delay: 5s; animation-duration: 8s; background: #5d5d5d; } /* Plata */
-        .particle:nth-child(6) { left: 85%; width: 5px; height: 5px; animation-delay: 3s; animation-duration: 5s; }
-
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.6;
-            }
-            90% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translateY(-105vh) translateX(50px);
-                opacity: 0;
-            }
-        }
-
-        /* 3. Escudo o emblema central con efecto de respiración */
-        .ravenclaw-crest {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            color: #eab437; /* Bronce oficial */
-            text-shadow: 0 0 20px rgba(234, 180, 55, 0.6);
-            animation: pulse 4s ease-in-out infinite;
-        }
-
-        .ravenclaw-crest h1 {
-            font-size: 3.5rem;
-            letter-spacing: 8px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .ravenclaw-crest p {
-            color: #946a2d;
-            font-size: 1.2rem;
-            letter-spacing: 4px;
-            font-style: italic;
-            margin-top: 5px;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(34, 47, 91, 0.8)); }
-            50% { transform: scale(1.03); filter: drop-shadow(0 0 25px rgba(234, 180, 55, 0.4)); }
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
   <!-- Texto/Emblema central de la Casa -->
      <main>
-
          <div class="ravenclaw-crest">
              <h1>Ravenclaw</h1>
              <p>Ingenio, Aprendizaje, Sabiduría</p>
          </div>
      </main>
-     
-     <div>
-        <br>
-        <h1 class="titulo-magico">Harry Potter</h1>
     
-    <h3 class="nota-pergamino">Harry Potter</h3>
-    </div>
-    <div>
-        <br>
-        <h1 class="titulo-magico">Harry Potter</h1>
-    
-    <h3 class="nota-pergamino">Harry Potter</h3>
-    </div>
-    <div>
-        <br>
-        <h1 class="titulo-magico">Harry Potter</h1>
-    
-    <h3 class="nota-pergamino">Harry Potter</h3>
-    </div>
-    <div class="contenedor-fondo">
-        
-    </div>
-    
-
     <!-- Partículas mágicas que suben por la pantalla -->
     <div class="magic-particles">
         <div class="particle"></div>
@@ -150,8 +27,32 @@
         <div class="particle"></div>
     </div>
 
-  
-    
-
+    <div class="contengo">
+        <div class="card cardsito" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card cardsito " style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card cardsito " style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
