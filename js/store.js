@@ -1,99 +1,43 @@
-import { API_HECHIZOS, API_POCIONES, API_PERSONAJES } from './env.js';
+const API_HECHIZOS = window.API_HECHIZOS;
+const API_POCIONES = window.API_POCIONES;
+const API_PERSONAJES = window.API_PERSONAJES;
 
-
-async function getSpells(){
-    const response = await fetch(API_HECHIZOS);
-    const data = await response.json();
-    console.log(data);
+async function getSpells() {
+    try {
+        const response = await fetch(API_HECHIZOS);
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.warn('No se pudieron cargar los hechizos:', error);
+    }
 }
 
-async function getPotions(){
-    const response = await fetch(API_POCIONES);
-    const data = await response.json();
-    console.log(data.data);
+async function getPotions() {
+    try {
+        const response = await fetch(API_POCIONES);
+        const data = await response.json();
+        console.log(data.data);
+    } catch (error) {
+        console.warn('No se pudieron cargar las pociones:', error);
+    }
 }
 
-
-async function getCharacters(){
-    const response = await fetch(API_PERSONAJES);
-    const data = await response.json();
-    console.log(data);
+async function getCharacters() {
+    try {
+        const response = await fetch(API_PERSONAJES);
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.warn('No se pudieron cargar los personajes:', error);
+    }
 }
 
 getSpells();
 getPotions();
 getCharacters();
 
-
-
-
-/* ================== Variables varitas ================== */
-let listValiras = [
-    {
-        "name": "Michael Corner",
-        "wood": "Manzano",
-        "core": "Cuerno de unicornio",
-        "lengthV": "assets/vatia1.jpg"
-
-    },
-    {
-        "name": "Filius Flitwick",
-        "wood": "",
-        "core": "Pluma de Fenix",
-        "lengthV": "assets/vatia2.jpg"
-    },
-    {
-        "name": "Zacharias Smith",
-        "wood": "Sauce",
-        "core": "",
-        "lengthV": null,
-        "img": "assets/vatia3.jpg"
-
-    }
-];
-const cardsVaritas = document.getElementById("cardsVaritas");
-
-console.log("listValiras ", listValiras);
-
-
-/* ================== Function varitas ================== */
-const createCard = (varita, htmlElement) => {
-    const card = `<div class="col">
-                <div class="card cardVarita" style="max-width: 18rem;">
-                    <div class="card-header cardVaritaEncabezado">
-                        <h4> ${varita.name} </h4>
-                    </div>
-                    <div class="divImgFormat">
-                        <img src="${varita.img}" class="rounded float-start imgVarita" alt="...">
-                    </div>
-
-                    <div class="card-body ">
-                        <h5 class="card-title">Descripcion:</h5>
-                        <p class="card-text">
-                        <ul>
-                            <li> Nucleo: ${varita.core}</li>
-                            <li> Madera:  ${varita.wood} </li>
-                            <li> Largo:  ${varita.lengthV} </li>
-                            <li> Precio: $ 32.00</li>
-                        </ul>
-                        </p>
-                    </div>
-                    <div class="card-footer cardVaritaPie">
-                        <button type="button" class="btn btn-warning btnFormat ">Comprar</button>
-                    </div>
-                </div>
-            </div>`;
-    htmlElement.insertAdjacentHTML("beforeend", card);
-};
-
-
-function getCardsVaritas(listValiras) {
-    listValiras.map((varita) => createCard(varita, cardsVaritas));
-};
-
-getCardsVaritas(listValiras);
-
-const { storeData, hogwartsStore, ProductCard } = window;
+const { storeData = { categories: [], products: {} }, hogwartsStore } = window;
+const ProductCardComponent = window.ProductCard;
 const { categories, products } = storeData;
 
 const categoryPicker = document.getElementById('categoryPicker');
@@ -152,7 +96,7 @@ function renderCategory(category, items) {
 
         items.slice(index, index + chunkSize).forEach((item) => {
             row.appendChild(
-                ProductCard({
+                ProductCardComponent({
                     title: item.title,
                     text: item.description,
                     image: item.image,
@@ -176,9 +120,13 @@ async function buildStore() {
     let potionCatalog = products.pociones;
 
     if (hogwartsStore && typeof hogwartsStore.fetchPotionCatalog === 'function') {
-        const apiPotions = await hogwartsStore.fetchPotionCatalog();
-        if (Array.isArray(apiPotions) && apiPotions.length) {
-            potionCatalog = apiPotions.map((item) => hogwartsStore.normalizePotion(item));
+        try {
+            const apiPotions = await hogwartsStore.fetchPotionCatalog();
+            if (Array.isArray(apiPotions) && apiPotions.length) {
+                potionCatalog = apiPotions.map((item) => hogwartsStore.normalizePotion(item));
+            }
+        } catch (error) {
+            console.warn('No se pudo cargar el catálogo remoto de pociones:', error);
         }
     }
 
