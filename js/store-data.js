@@ -2,6 +2,12 @@
 window.storeData = {
     categories: [
         {
+            id: 'hechizos',
+            title: 'Hechizos',
+            subtitle: 'Encantamientos para combate y utilidad',
+            accent: 'Artes mágicas'
+        },
+        {
             id: 'pociones',
             title: 'Pociones',
             subtitle: 'Preparaciones para la práctica diaria',
@@ -9,6 +15,26 @@ window.storeData = {
         }
     ],
     products: {
+        hechizos: [
+            {
+                title: 'Evanesco',
+                description: 'Desaparece objetos.',
+                image: 'assets/Evanez.jpg',
+                amount: '2,500 galeones'
+            },
+            {
+                title: 'Accio',
+                description: 'Atrae cualquier objeto hacia tu mano.',
+                image: 'assets/Accio.jpg',
+                amount: '4,000 galeones'
+            },
+            {
+                title: 'Avada Kedavra',
+                description: 'El maleficio prohibido, conocido por su enorme peligrosidad.',
+                image: 'assets/Avada1.jpg',
+                amount: '500,000,000 galeones'
+            }
+        ],
         pociones: [
             {
                 title: 'Felix Felicis',
