@@ -28,6 +28,25 @@ const catalog = [
 
 let cartProducts = [];
 
+function syncAndRenderCart() {
+  syncCartProducts();
+  renderCartItems();
+}
+
+function setupCartWatchers() {
+  if (!cartStorage) return;
+
+  window.addEventListener('storage', (event) => {
+    if (event.key === cartStorage.STORAGE_KEY) {
+      syncAndRenderCart();
+    }
+  });
+
+  // Refresh when the tab becomes active again.
+  window.addEventListener('focus', syncAndRenderCart);
+  window.addEventListener('pageshow', syncAndRenderCart);
+}
+
 function formatPrice(value) {
   return Number(value || 0).toLocaleString('es-MX', {
     minimumFractionDigits: 2,
@@ -187,4 +206,5 @@ function removeProduct(id) {
 document.addEventListener("DOMContentLoaded", () => {
   renderCatalog();
   renderCartItems();
+  setupCartWatchers();
 });
