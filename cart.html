@@ -5,7 +5,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="css/styleCart.css" />
+    <link rel="stylesheet" href="css/cart.css" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
         <div class="location">
             <div class="description">
                 <span class="text">Estás en</span>
-                <img src="mexico-flag.png" alt="" class="location-flag" />
+                <img src="assets/mexico-flag.png" alt="" class="location-flag" />
             </div>
         </div>
 
@@ -29,47 +29,51 @@
 
     <main class="cart-container">
         <!-- Secció de Catálogo / Productos disponibles -->
-        <section class="catalog-section">
-            <h2 class="section-subtitle">Productos Disponibles</h2>
-            <div id="catalog-list" class="catalog-grid"></div>
-        </section>
+        <div id="shop_layout-container">
+            <section class="catalog-section">
+                <h2 class="section-subtitle">Productos Disponibles</h2>
+                <div id="catalog-list" class="catalog-grid"></div>
+            </section>
 
-        <!-- Sección del Carrito -->
-        <section class="cart-section">
-            <h1 class="cart-title">Carrito</h1>
-            <div id="cart-items-list" class="cart-items-list"></div>
-        </section>
-    </main>
-
-    <div id="payment-container" class="m-0 p-0 rounded p-4 m-4">
-        <h3 class="text">Resumen del pedido</h3>
-        <div class="order-summary">
-            <div class="subtotal">
-                <p class="text">
-                    Subtotal (<span id="total-products">M</span> productos)
-                </p>
-                <p class="subtotal price">
-                    <span id="subtotal-number">X.a</span> galeones
-                </p>
-            </div>
-
-            <div class="estimating_shipping">
-                <p class="text">Costos de envío</p>
-                <p class="shipping price">
-                    <span id="shipping-number">Y.b</span> galeones
-                </p>
-            </div>
-
-            <div class="total mb-3">
-                <p class="text">Total</p>
-                <p class="total price">
-                    <span id="total-number">X.a + Y.b</span> galeones
-                </p>
-            </div>
+            <!-- Sección del Carrito -->
+            <section class="cart-section">
+                <h1 class="cart-title">Carrito</h1>
+                <div id="cart-items-list" class="cart-items-list"></div>
+            </section>
         </div>
 
-        <button type="button" class="btn btn-dark p-3">Pagar</button>
-    </div>
+        <div id="payment-container" class="m-0 p-0 rounded p-4 m-4">
+            <h3 class="text">Resumen del pedido</h3>
+            <div class="order-summary">
+                <div class="subtotal">
+                    <p class="text">
+                        Subtotal (<span id="total-products">M</span> productos)
+                    </p>
+                    <p class="subtotal price">
+                        <span id="subtotal-number">X.a</span> galeones
+                    </p>
+                </div>
+
+                <div class="estimating_shipping">
+                    <p class="text">Costos de envío</p>
+                    <p class="shipping price">
+                        <span id="shipping-number">Y.b</span> galeones
+                    </p>
+                </div>
+
+                <div class="total mb-3">
+                    <p class="text">Total</p>
+                    <p class="total price">
+                        <span id="total-number">X.a + Y.b</span> galeones
+                    </p>
+                </div>
+            </div>
+            <button type="button" class="btn btn-dark p-3">Pagar</button>
+        </div>
+
+    </main>
+
+
 
     <script src="js/cart.js"></script>
 </body>
