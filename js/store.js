@@ -29,7 +29,7 @@ getCharacters();
 
 
 /* ================== Variables varitas ================== */
-
+const formEl = document.getElementById("formAlbum");
 const listValiras = [
     {
         "name": "Michael Corner",

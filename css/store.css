@@ -18,8 +18,6 @@ h2 {
     background-color: #0D1E4A;
     color: #f4f4f5 !important;
     text-align: center;
-
-
     text-shadow:
         0 0 20px #946a2d,
         0 0 10px #946a2d,
@@ -38,6 +36,12 @@ h2 {
     background-image: url("/assets/pergamono.jpg");
 }
 
+.divImgFormat {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .imgVarita {
     width: 200px;
     /* Ancho fijo deseado */
@@ -46,6 +50,5 @@ h2 {
     object-fit: cover;
     /* Evita la distorsión */
     position: center;
-    justify-content: center;
-    text-align: center;
+
 }
