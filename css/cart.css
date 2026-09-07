@@ -2,6 +2,7 @@
    1. VARIABLES GLOBALES Y RESETEO
    ========================================================================== */
 :root {
+  /* Variables de color compartidas por toda la página. */
   --color-blue-dark-blue: #0D1E4A;
   --color-light-blue: #213264;
   --color-gray: #5D5D5D;
@@ -11,12 +12,14 @@
 }
 
 * {
+  /* Restablece márgenes y dimensiones para un diseño consistente. */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
+  /* Configuración general y distribución vertical de la página. */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   background-color: #0D1E4A;
@@ -31,6 +34,7 @@ body {
    2. ENCABEZADO Y RESUMEN DE PAGO
    ========================================================================== */
 header.container {
+  /* Encabezado a ancho completo con el color principal de la interfaz. */
   max-width: 100% !important;
   padding: 20px 40px;
   background-color: var(--color-light-blue);
@@ -52,6 +56,7 @@ a.main {
 }
 
 #payment-container {
+  /* Mantiene visible el resumen de pago durante el desplazamiento. */
   max-width: 30rem;
   min-width: 280px;
   border: var(--color-gray) solid 1px;
@@ -66,18 +71,21 @@ a.main {
 }
 
 #payment, #user-form {
+  /* Organiza los elementos de los formularios en una columna. */
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 #user-form{
+  /* Separa visualmente los datos del usuario del resumen del pedido. */
   border-top: var(--color-gold) solid 1px;
   margin-top: 20px;
   padding-top: 20px;
 }
 
 .order-summary {
+  /* Estructura vertical del resumen y sus importes. */
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -86,6 +94,7 @@ a.main {
 }
 
 .order-summary>div {
+  /* Coloca cada concepto y su valor en extremos opuestos. */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -97,6 +106,7 @@ a.main {
 }
 
 div.total {
+  /* Resalta el importe final con líneas y espacio adicional. */
   padding: 15px 0;
   border-top: 1px solid var(--color-gray);
   border-bottom: 1px solid var(--color-gray);
@@ -106,6 +116,7 @@ div.total {
    3. CATÁLOGO Y LISTA DEL CARRITO
    ========================================================================== */
 .cart-container {
+  /* Divide el contenido principal entre catálogo y carrito. */
   margin-top: 30px !important;
 
   max-width: 1500px;
@@ -148,12 +159,14 @@ div.total {
 }
 
 .catalog-grid {
+  /* Genera una cuadrícula adaptable para las tarjetas de productos. */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
 
 .catalog-card {
+  /* Estilo y distribución interna de una tarjeta de producto. */
   border: 1px solid var(--color-light-gray);
   border-radius: 6px;
   padding: 16px;
@@ -183,6 +196,7 @@ div.total {
 }
 
 .add-to-cart-btn {
+  /* Acción principal para añadir productos al carrito. */
   background-color: var(--color-light-blue);
   color: #946A2D;
   border: none;
@@ -199,10 +213,12 @@ div.total {
 
 /* Items del Carrito */
 .cart-items-list {
+  /* Delimita visualmente la lista de productos seleccionados. */
   border-top: 1px solid var(--color-light-gray);
 }
 
 .cart-item {
+  /* Distribuye la imagen, los detalles y el precio del artículo. */
   display: flex;
   gap: 24px;
   padding: 24px 0;
@@ -237,6 +253,7 @@ div.total {
 
 /* Control de cantidad */
 .quantity-wrapper {
+  /* Agrupa la etiqueta y el control de cantidad. */
   display: flex;
   align-items: center;
   gap: 12px;
@@ -249,6 +266,7 @@ div.total {
 }
 
 .quantity-control {
+  /* Contenedor visual de los botones y la cantidad actual. */
   display: inline-flex;
   align-items: center;
   border: 1px solid var(--color-black);
@@ -278,6 +296,7 @@ div.total {
 
 /* Acciones (Eliminar / Favoritos) */
 .item-actions {
+  /* Mantiene juntas las acciones disponibles para cada artículo. */
   display: flex;
   gap: 12px;
 }
@@ -309,6 +328,7 @@ div.total {
 }
 
 .item-total-price {
+  /* Destaca el precio total de cada producto. */
   font-size: 1.15rem;
   font-weight: 700;
   text-align: right;
@@ -325,6 +345,7 @@ div.total {
    4. MEDIA QUERIES CONSOLIDADAS
    ========================================================================== */
 @media (max-width: 576px) {
+  /* Ajustes para pantallas pequeñas y diseño sin desbordamientos. */
   header.container {
     font-size: 20px;
     gap: 0 !important;
@@ -356,7 +377,9 @@ div.total {
   }
 }
 
+/* Botones de envío del formulario: ocupan el ancho disponible en fila */
 #submit-btns{
+  /* Distribuye los botones del formulario en una misma fila. */
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -366,12 +389,15 @@ div.total {
   width: 50%;
 }
 
-
+/* Oculta elementos sin afectar el flujo general del layout */
 .hide{
+  /* Oculta elementos sin modificar el resto del diseño. */
   display: none !important;
 }
 
+/* Formulario de usuario con animación de apertura/cierre */
 #user-form {
+  /* Anima la apertura y el cierre del formulario de usuario. */
     overflow: hidden;
     max-height: 500px; /* ajusta según el alto real de tu formulario */
     opacity: 1;
