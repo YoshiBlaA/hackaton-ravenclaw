@@ -10,6 +10,55 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #213264;">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="home.html">
+                <img src="assets/logo-raven" alt="Ravenclaw" width="50" height="50">
+            </a>
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarRavenclaw" aria-controls="navbarRavenclaw"
+                aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarRavenclaw">
+
+                <!-- Links -->
+                <ul class="navbar-nav me-auto">
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html" style="color: #946A2D;">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" style="color: #946A2D;">
+                            Bienvenida
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html" style="color: #946A2D;">
+                            Tienda
+                        </a>
+                    </li>
+
+                </ul>
+                <!-- Buscador -->
+                <form class="d-flex mt-2 mt-lg-0" role="search">
+                    <input class="form-control rounded-pill" type="search"
+                        placeholder="Descubre la magia..." aria-label="Buscar">
+                </form>
+                <!-- Carrito -->
+                <a href="cart.html" class="ms-lg-3" style="color: #946A2D;">
+                    <i class="bi bi-cart3"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
     <main class="page-shell">
         <header class="page-header">
             <p class="page-header__eyebrow">Hogwarts</p>
