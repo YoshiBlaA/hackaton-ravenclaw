@@ -3,11 +3,11 @@
    ========================================================================== */
 :root {
   --color-blue-dark-blue: #0D1E4A;
-  --color-light-blue: #213264;    
+  --color-light-blue: #213264;
   --color-gray: #5D5D5D;
   --color-light-gray: #e5e5e5;
-  --color-gold: #946A2D; 
-  --color-black: #000000;    
+  --color-gold: #946A2D;
+  --color-black: #000000;
 }
 
 * {
@@ -18,14 +18,13 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
-  color: var(--color-black);
+
+  background-color: #0D1E4A;
+  color: var(--color-gold);
   padding: 0px 0px;
-  
   display: flex;
   flex-direction: column;
   height: 100vh;
-
 }
 
 /* ==========================================================================
@@ -44,7 +43,7 @@ header.container a {
   color: white;
 }
 
-.description img { 
+.description img {
   height: 60px;
 }
 
@@ -53,9 +52,6 @@ a.main {
 }
 
 #payment-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   max-width: 30rem;
   min-width: 280px;
   border: var(--color-gray) solid 1px;
@@ -65,8 +61,20 @@ a.main {
   top: 0;
 }
 
-#payment-container > div .text {
+#payment-container .text {
   font-weight: bold;
+}
+
+#payment, #user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#user-form{
+  border-top: var(--color-gold) solid 1px;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .order-summary {
@@ -77,7 +85,7 @@ a.main {
   gap: 15px;
 }
 
-.order-summary > div {
+.order-summary>div {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -112,11 +120,11 @@ div.total {
   overflow-y: auto;
 }
 
-#shop_layout-container{
+#shop_layout-container {
   margin-top: 24px;
 }
 
-.cart-title, 
+.cart-title,
 .section-subtitle {
   font-family: "Georgia", "Times New Roman", serif;
   font-weight: 400;
@@ -175,8 +183,8 @@ div.total {
 }
 
 .add-to-cart-btn {
-  background-color: var(--color-black);
-  color: #ffffff;
+  background-color: var(--color-light-blue);
+  color: #946A2D;
   border: none;
   padding: 10px;
   font-weight: 600;
@@ -254,7 +262,7 @@ div.total {
   font-size: 1.1rem;
   cursor: pointer;
   padding: 2px 8px;
-  color: var(--color-black);
+  color: var(--color-golf);
   line-height: 1;
 }
 
@@ -282,7 +290,7 @@ div.total {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-black);
+  color: var(--color-golf);
   transition: opacity 0.2s;
 }
 
@@ -323,7 +331,7 @@ div.total {
   }
 
   header.container img,
-  .description img { 
+  .description img {
     height: 35px;
   }
 
@@ -331,7 +339,7 @@ div.total {
     gap: 0 !important;
   }
 
-  .order-summary > div {
+  .order-summary>div {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
@@ -346,4 +354,33 @@ div.total {
   .item-total-price {
     text-align: left;
   }
+}
+
+#submit-btns{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#submit-btns button{
+  width: 50%;
+}
+
+
+.hide{
+  display: none !important;
+}
+
+#user-form {
+    overflow: hidden;
+    max-height: 500px; /* ajusta según el alto real de tu formulario */
+    opacity: 1;
+    transform: translateY(0);
+    transition: max-height 0.4s ease, opacity 0.7s ease, transform 0.7s ease;
+}
+
+#user-form.hide-anim {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
 }

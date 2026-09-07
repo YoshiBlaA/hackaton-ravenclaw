@@ -100,7 +100,13 @@ function renderCategory(category, items) {
                     title: item.title,
                     text: item.description,
                     image: item.image,
-                    amount: item.amount
+                    amount: item.amount,
+                    cartItem: {
+                        source: `store-${category.id}`,
+                        name: item.title,
+                        image: item.image,
+                        price: item.amount
+                    }
                 })
             );
         });
