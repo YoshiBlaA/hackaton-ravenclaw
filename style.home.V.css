@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background-image: url("./assets/harry-potter-home16.1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.titulo-ravenclaw {
+    color: white;
+    font-family: "Cinzel Decorative", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px black, 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.subtitulo-ravenclaw {
+    color: white;
+    font-family: "Cinzel Decorative", serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px black, 0 0 8px rgba(255, 255, 255, 0.25);
+}
+
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 350px;
+  }
+}
+
+/* Celular */
+@media (max-width: 576px) {
+  .carousel-img {
+    height: 250px;
+  }
+}
+
+/* =========================
+   SECCIÓN DESCRIPCIÓN
+========================= */
+
+.descripcion-ravenclaw {
+    max-width: 900px;
+
+    margin: 50px auto;
+    padding: 40px;
+
+    /* Fondo oscuro transparente */
+    background-color: rgba(0, 0, 0, 0.65);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+
+    /* Sombra */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.subtitulo-ravenclaw {
+    color: white;
+
+    font-family: "Cinzel Decorative", serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        2px 2px 4px black,
+        0 0 8px rgba(255, 255, 255, 0.3);
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.texto-descripcion {
+    color: white;
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BOTÓN RAVENCLAW
+========================= */
+
+.btn-ravenclaw {
+    background-color: #0b3d66;
+    color: white;
+
+    border: 1px solid white;
+
+    padding: 10px 25px;
+
+    font-family: "Cinzel Decorative", serif;
+
+    transition: 0.3s;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+.btn-ravenclaw:hover {
+    background-color: white;
+    color: #0b3d66;
+    border-color: #0b3d66;
+
+    transform: scale(1.05);
+}
