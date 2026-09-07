@@ -1,9 +1,5 @@
 Notas Javi:
 
-Preguntar a Carmen que esta desarollando cruza con Andres
-
-
-
 Sprint 1
 Integrantes del Equipo:
 1. Javier - Scrum
@@ -19,17 +15,16 @@ Integrantes del Equipo:
 11. Carmen Ramirez - HTML de carrito, estructura de la pagina
 12. Jose Eduardo Olan - Cards de hechisos para las tiendas
 
-----------------------------------------------------------------
 Por hacer
 Integracion de Tienda y Carrito de compras
 
 En desarollo
 
 En revision
-9. Ivan Mauricio - Personajes 
-4. Victor Olachea - Presentacion y Carusel
 
 Concluido
+9. Ivan Mauricio - Personajes 
+4. Victor Olachea - Presentacion y Carusel
 3. Fernanda Jimenez - Cards de pociones
 7. Diana S - Cards 
 12. Jose Eduardo Olan - Cards de hechisos para las tiendas - Store.htlml
@@ -39,7 +34,20 @@ Concluido
 5. Jairo Cortez - Header y contenedor de pago
 11. Carmen Ramirez - HTML de carrito, estructura de la pagina - cart
 
+-----------------------------------------------
+
 Sprint 2
-1. Javier - Scrum
-2. Andres Cornelio - Integracion de Api
-                     
+
+
+Por hacer
+Efectos Visutales 
+
+En desarollo
+Home - Victor, Marcela
+Cart y Store -Integracion de Tienda y Carrito de compras - Fer, Diana, Jose Ed, Jairo, Carmen
+Bienvenida - Andres , Carlos, Rosario, Ivan.
+
+En revision
+
+Concluido            
+1. Javier - Organizacion de GitHUB, Codigo y desarollo
