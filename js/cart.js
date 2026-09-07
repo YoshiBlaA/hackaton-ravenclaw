@@ -206,5 +206,47 @@ function removeProduct(id) {
 document.addEventListener("DOMContentLoaded", () => {
   renderCatalog();
   renderCartItems();
+});
+
+const paymentDiv = document.getElementById('payment');
+const userForm = document.getElementById('user-form');
+const payBtn = paymentDiv.querySelector('button');
+const form = userForm.querySelector('form');
+const cancelBtn = userForm.querySelector('.btn-danger');
+
+// Estado inicial: oculto con animación (en vez de la clase "hide")
+userForm.classList.remove('hide');
+userForm.classList.add('hide-anim');
+
+payBtn.addEventListener('click', () => {
+    userForm.classList.remove('hide-anim');
+    payBtn.classList.add('hide');
+});
+
+cancelBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    userForm.classList.add('hide-anim');
+    payBtn.classList.remove('hide');
+});
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (e.submitter && e.submitter.classList.contains('btn-danger')) {
+        userForm.classList.add('hide-anim');
+        payBtn.classList.remove('hide');
+        return;
+    }
+
+    const email = document.getElementById('email').value;
+    const name = document.getElementById('name').value;
+    const direccion = document.getElementById('direccion').value;
+
+    alert(
+        `¡Pedido enviado!\n\n` +
+        `Nombre: ${name}\n` +
+        `Correo: ${email}\n` +
+        `Dirección: ${direccion}`
+    );
   setupCartWatchers();
 });
