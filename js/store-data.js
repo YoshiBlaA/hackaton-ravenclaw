@@ -12,6 +12,12 @@ window.storeData = {
             title: 'Pociones',
             subtitle: 'Preparaciones para la práctica diaria',
             accent: 'Elixires'
+        },
+        {
+            id: 'varitas',
+            title: 'Varitas',
+            subtitle: 'Modelos y núcleos para magos y brujas',
+            accent: 'Artesanos de Ollivander'
         }
     ],
     products: {
@@ -53,6 +59,26 @@ window.storeData = {
                 description: 'Una poción fascinante con un olor irresistible, famosa por despertar recuerdos y emociones intensas.',
                 image: 'https://static.wikia.nocookie.net/harrypotter/images/4/4f/B6C9M1_cropped_Amortentia.png',
                 amount: '72 galeones'
+            }
+        ],
+        varitas: [
+            {
+                title: 'Varita de Michael Corner',
+                description: 'Núcleo: Cuerno de unicornio. Madera: Manzano. Largo: no especificado.',
+                image: 'assets/varita1.jpg',
+                amount: '32 galeones'
+            },
+            {
+                title: 'Varita de Filius Flitwick',
+                description: 'Núcleo: Pluma de Fénix. Madera: no especificada. Largo: no especificado.',
+                image: 'assets/varita2.jpg',
+                amount: '32 galeones'
+            },
+            {
+                title: 'Varita de Zacharias Smith',
+                description: 'Núcleo: no especificado. Madera: Sauce. Largo: no especificado.',
+                image: 'assets/varita3.jpg',
+                amount: '32 galeones'
             }
         ]
     },
