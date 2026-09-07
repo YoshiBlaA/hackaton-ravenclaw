@@ -24,13 +24,10 @@ Por hacer
 Integracion de Tienda y Carrito de compras
 
 En desarollo
-9. Ivan Mauricio - Carrusel de imagenes - Personajes 
-2. Andres Cornelio - Integracion de Api
 
 En revision
+9. Ivan Mauricio - Personajes 
 4. Victor Olachea - Presentacion y Carusel
-5. Jairo Cortez - Header y contenedor de pago
-11. Carmen Ramirez - HTML de carrito, estructura de la pagina
 
 Concluido
 3. Fernanda Jimenez - Cards de pociones
@@ -39,7 +36,10 @@ Concluido
 8. Marcela Collado - Navbar de home
 10. Rosario Champarro - Pregunta de bienvenida, reactividad
 6. Carlos Ceballos - Fondo y tipo grafia  
+5. Jairo Cortez - Header y contenedor de pago
+11. Carmen Ramirez - HTML de carrito, estructura de la pagina - cart
 
 Sprint 2
 1. Javier - Scrum
+2. Andres Cornelio - Integracion de Api
                      
