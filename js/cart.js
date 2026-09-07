@@ -1,16 +1,9 @@
-const summaryObject = {
-    subtotal: 602345,
-    shipping: 232345,
-}
-
-const totalProducts = document.querySelector("#total-products")
+const totalProducts = document.querySelector("#total-products");
 const subtotalPrice = document.querySelector("#subtotal-number");
 const shippingPrice = document.querySelector("#shipping-number");
 const totalPrice = document.querySelector("#total-number");
-
-subtotalPrice.textContent = summaryObject.subtotal;
-shippingPrice.textContent = summaryObject.shipping;
-totalPrice.textContent = summaryObject.subtotal + summaryObject.shipping;
+const cartStorage = window.RavenclawCart;
+const SHIPPING_COST = 0;
 
 const catalog = [
   {
@@ -33,8 +26,29 @@ const catalog = [
   }
 ];
 
-// Arreglo del carrito (inicia vacío o con items por defecto)
 let cartProducts = [];
+
+function formatPrice(value) {
+  return Number(value || 0).toLocaleString('es-MX', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+}
+
+function syncCartProducts() {
+  cartProducts = cartStorage ? cartStorage.getItems() : [];
+}
+
+function renderSummary() {
+  const totalQuantity = cartProducts.reduce((sum, item) => sum + item.quantity, 0);
+  const subtotal = cartProducts.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const shipping = totalQuantity > 0 ? SHIPPING_COST : 0;
+
+  totalProducts.textContent = totalQuantity;
+  subtotalPrice.textContent = formatPrice(subtotal);
+  shippingPrice.textContent = formatPrice(shipping);
+  totalPrice.textContent = formatPrice(subtotal + shipping);
+}
 
 // Renderizar las tarjetas del catálogo
 function renderCatalog() {
@@ -63,17 +77,12 @@ function addToCart(productId) {
   const productToBuy = catalog.find(item => item.id === productId);
   if (!productToBuy) return;
 
-  const existingInCart = cartProducts.find(item => item.id === productId);
-
-  if (existingInCart) {
-    // Si ya existe en el carrito, aumentamos la cantidad
-    existingInCart.quantity += 1;
-  } else {
-    // Si no existe, lo agregamos con cantidad 1
-    cartProducts.push({
+  if (cartStorage) {
+    cartStorage.addItem({
       ...productToBuy,
-      quantity: 1
+      source: 'catalog'
     });
+    syncCartProducts();
   }
 
   renderCartItems();
@@ -81,16 +90,19 @@ function addToCart(productId) {
 
 // Renderizar la lista del carrito
 function renderCartItems() {
+  syncCartProducts();
+
   const container = document.getElementById("cart-items-list");
   container.innerHTML = "";
 
   if (cartProducts.length === 0) {
     container.innerHTML = '<p class="empty-cart-msg">Carrito vacio.</p>';
+    renderSummary();
     return;
   }
 
   cartProducts.forEach(product => {
-    const itemTotal = (product.price * product.quantity).toFixed(2);
+    const itemTotal = formatPrice(product.price * product.quantity);
     
     const itemHTML = document.createElement("div");
     itemHTML.classList.add("cart-item");
@@ -101,19 +113,19 @@ function renderCartItems() {
 
       <div class="item-details">
         <h2 class="item-name">${product.name}</h2>
-        <span class="item-unit-price">$ ${product.price.toFixed(2)}/cu</span>
+        <span class="item-unit-price">$ ${formatPrice(product.price)}/cu</span>
 
         <div class="quantity-wrapper">
           <span class="quantity-label">Cantidad</span>
           <div class="quantity-control">
-            <button class="qty-btn" onclick="changeQuantity(${product.id}, -1)">—</button>
+            <button class="qty-btn js-qty-decrease">—</button>
             <span class="qty-number">${product.quantity}</span>
-            <button class="qty-btn" onclick="changeQuantity(${product.id}, 1)">+</button>
+            <button class="qty-btn js-qty-increase">+</button>
           </div>
         </div>
 
         <div class="item-actions">
-          <button class="action-btn" onclick="removeProduct(${product.id})" aria-label="Delete item">
+          <button class="action-btn js-remove-product" aria-label="Delete item">
             <svg viewBox="0 0 24 24">
               <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
             </svg>
@@ -131,18 +143,32 @@ function renderCartItems() {
       </div>
     `;
 
+    const decreaseButton = itemHTML.querySelector('.js-qty-decrease');
+    const increaseButton = itemHTML.querySelector('.js-qty-increase');
+    const removeButton = itemHTML.querySelector('.js-remove-product');
+
+    decreaseButton.addEventListener('click', () => changeQuantity(product.id, -1));
+    increaseButton.addEventListener('click', () => changeQuantity(product.id, 1));
+    removeButton.addEventListener('click', () => removeProduct(product.id));
+
     container.appendChild(itemHTML);
   });
+
+  renderSummary();
 }
 
 // Cambiar la cantidad de un producto
 function changeQuantity(id, amount) {
   const product = cartProducts.find(item => item.id === id);
   if (product) {
-    product.quantity += amount;
-    if (product.quantity <= 0) {
+    const nextQuantity = product.quantity + amount;
+    if (nextQuantity <= 0) {
       removeProduct(id);
     } else {
+      if (cartStorage) {
+        cartStorage.updateQuantity(id, nextQuantity);
+      }
+      syncCartProducts();
       renderCartItems();
     }
   }
@@ -150,7 +176,10 @@ function changeQuantity(id, amount) {
 
 // Eliminar un producto
 function removeProduct(id) {
-  cartProducts = cartProducts.filter(item => item.id !== id);
+  if (cartStorage) {
+    cartStorage.removeItem(id);
+  }
+  syncCartProducts();
   renderCartItems();
 }
 
