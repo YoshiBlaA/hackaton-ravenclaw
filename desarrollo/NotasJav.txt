@@ -1,0 +1,45 @@
+Notas Javi:
+
+Preguntar a Carmen que esta desarollando cruza con Andres
+
+
+
+Sprint 1
+Integrantes del Equipo:
+1. Javier - Scrum
+2. Andres Cornelio - Integracion de Api
+3. Fernanda Jimenez - Cards de pociones
+4. Victor Olachea - Presentacion y Carusel
+5. Jairo Cortez - Header y contenedor de pago
+6. Carlos Ceballos - Fondo y tipo grafia                       //Posible Conflicto en su merch
+7. Diana S - Cards 
+8. Marcela Collado - Navbar
+9. Ivan Mauricio - Carrusel de imagenes - Personajes 
+10. Rosario Champarro - Pregunta de bienvenida, reactividad
+11. Carmen Ramirez - HTML de carrito, estructura de la pagina
+12. Jose Eduardo Olan - Cards de hechisos para las tiendas
+
+----------------------------------------------------------------
+Por hacer
+Integracion de Tienda y Carrito de compras
+
+En desarollo
+10. Rosario Champarro - Pregunta de bienvenida, reactividad
+
+En revision
+9. Ivan Mauricio - Carrusel de imagenes - Personajes 
+4. Victor Olachea - Presentacion y Carusel
+2. Andres Cornelio - Integracion de Api
+3. Fernanda Jimenez - Cards de pociones
+8. Marcela Collado - Navbar
+5. Jairo Cortez - Header y contenedor de pago
+7. Diana S - Cards 
+11. Carmen Ramirez - HTML de carrito, estructura de la pagina
+12. Jose Eduardo Olan - Cards de hechisos para las tiendas
+
+Concluido
+6. Carlos Ceballos - Fondo y tipo grafia  
+
+Sprint 2
+1. Javier - Scrum
+                     
