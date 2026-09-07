@@ -1,0 +1,51 @@
+body {
+    /* background-image: url("/assets/fondoHP.jpg"); */
+}
+
+h2 {
+    color: #0D1E4A !important;
+}
+
+#sectionVaritas {
+    /** Elimina el margen predeterminado */
+    margin: 15px;
+    /**Espacio interno de la página */
+    padding: 10px;
+
+}
+
+.cardVaritaEncabezado {
+    background-color: #0D1E4A;
+    color: #f4f4f5 !important;
+    text-align: center;
+
+
+    text-shadow:
+        0 0 20px #946a2d,
+        0 0 10px #946a2d,
+        0 0 20px #946a2d,
+        0 0 20px #946a2d;
+}
+
+.cardVaritaPie {
+    background-color: #0D1E4A;
+    color: #f4f4f5 !important;
+    text-align: end;
+}
+
+.cardVarita {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    background-image: url("/assets/pergamono.jpg");
+}
+
+.imgVarita {
+    width: 200px;
+    /* Ancho fijo deseado */
+    height: 200px;
+    /* Alto fijo deseado */
+    object-fit: cover;
+    /* Evita la distorsión */
+    position: center;
+    justify-content: center;
+    text-align: center;
+}
