@@ -27,29 +27,37 @@
         </div>
     </header>
 
-    <div id="payment-container" class="m-0 p-0 
-            rounded
-            p-4 m-4">
+    <div id="payment-container" class="m-0 p-0 rounded p-4 m-4">
         <h3 class="text">Resumen del pedido</h3>
         <div class="order-summary">
             <div class="subtotal">
-                <p class="text">Subtotal (M productos)</p>
-                <p class="price">$X.a</p>
+                <p class="text">
+                    Subtotal (<span id="total-products">M</span> productos)
+                </p>
+                <p class="subtotal price">
+                    <span id="subtotal-number">X.a</span> galeones
+                </p>
             </div>
 
             <div class="estimating_shipping">
                 <p class="text">Costos de envío</p>
-                <p class="price">$Y.b</p>
+                <p class="shipping price">
+                    <span id="shipping-number">Y.b</span> galeones
+                </p>
             </div>
 
-            <div class="total">
+            <div class="total mb-3">
                 <p class="text">Total</p>
-                <p class="price">$X.a + $Y.b</p>
+                <p class="total price">
+                    <span id="total-number">X.a + Y.b</span> galeones
+                </p>
             </div>
         </div>
 
-        <button type="button" class="btn btn-dark">Check Out</button>
+        <button type="button" class="btn btn-dark p-3">Pagar</button>
     </div>
+
+    <script src="carrito.js"></script>
 </body>
 
 </html>

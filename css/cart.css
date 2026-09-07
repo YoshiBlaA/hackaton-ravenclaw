@@ -1,0 +1,349 @@
+/* ==========================================================================
+   1. VARIABLES GLOBALES Y RESETEO
+   ========================================================================== */
+:root {
+  --color-blue-dark-blue: #0D1E4A;
+  --color-light-blue: #213264;    
+  --color-gray: #5D5D5D;
+  --color-light-gray: #e5e5e5;
+  --color-gold: #946A2D; 
+  --color-black: #000000;    
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: var(--color-black);
+  padding: 0px 0px;
+  
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+}
+
+/* ==========================================================================
+   2. ENCABEZADO Y RESUMEN DE PAGO
+   ========================================================================== */
+header.container {
+  max-width: 100% !important;
+  padding: 20px 40px;
+  background-color: var(--color-light-blue);
+  color: white;
+  font-size: 20px;
+}
+
+header.container a {
+  text-decoration: none;
+  color: white;
+}
+
+.description img { 
+  height: 60px;
+}
+
+a.main {
+  width: fit-content !important;
+}
+
+#payment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 30rem;
+  min-width: 280px;
+  border: var(--color-gray) solid 1px;
+  height: fit-content;
+
+  position: sticky;
+  top: 0;
+}
+
+#payment-container > div .text {
+  font-weight: bold;
+}
+
+.order-summary {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.order-summary > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.order-summary p {
+  margin: 0;
+}
+
+div.total {
+  padding: 15px 0;
+  border-top: 1px solid var(--color-gray);
+  border-bottom: 1px solid var(--color-gray);
+}
+
+/* ==========================================================================
+   3. CATÁLOGO Y LISTA DEL CARRITO
+   ========================================================================== */
+.cart-container {
+  margin-top: 30px !important;
+
+  max-width: 1500px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 100%;
+
+  flex: 1;
+
+  overflow-y: auto;
+}
+
+#shop_layout-container{
+  margin-top: 24px;
+}
+
+.cart-title, 
+.section-subtitle {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.section-subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.cart-title {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+}
+
+/* Catálogo */
+.catalog-section {
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 2px dashed var(--color-light-gray);
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.catalog-card {
+  border: 1px solid var(--color-light-gray);
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.catalog-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.catalog-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.catalog-card-price {
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  margin-bottom: 12px;
+}
+
+.add-to-cart-btn {
+  background-color: var(--color-black);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #333333;
+}
+
+/* Items del Carrito */
+.cart-items-list {
+  border-top: 1px solid var(--color-light-gray);
+}
+
+.cart-item {
+  display: flex;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.item-image img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+.item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.item-unit-price {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  margin-bottom: 18px;
+}
+
+/* Control de cantidad */
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.quantity-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.quantity-control {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-black);
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+.qty-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 2px 8px;
+  color: var(--color-black);
+  line-height: 1;
+}
+
+.qty-btn:hover {
+  opacity: 0.6;
+}
+
+.qty-number {
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0 8px;
+}
+
+/* Acciones (Eliminar / Favoritos) */
+.item-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black);
+  transition: opacity 0.2s;
+}
+
+.action-btn:hover {
+  opacity: 0.6;
+}
+
+.action-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.item-total-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: right;
+  min-width: 100px;
+}
+
+.empty-cart-msg {
+  padding: 40px 0;
+  font-size: 1.1rem;
+  color: var(--color-gray);
+}
+
+/* ==========================================================================
+   4. MEDIA QUERIES CONSOLIDADAS
+   ========================================================================== */
+@media (max-width: 576px) {
+  header.container {
+    font-size: 20px;
+    gap: 0 !important;
+  }
+
+  header.container img,
+  .description img { 
+    height: 35px;
+  }
+
+  .nav-actions {
+    gap: 0 !important;
+  }
+
+  .order-summary > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  /* Ajuste responsivo para tarjetas del carrito */
+  .cart-item {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .item-total-price {
+    text-align: left;
+  }
+}
