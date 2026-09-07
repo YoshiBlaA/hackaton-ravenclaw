@@ -1,0 +1,30 @@
+Notas Javi:
+
+Preguntar a Carmen que esta desarollando cruza con Andres
+
+
+
+Sprint 1
+Integrantes del Equipo:
+1. Javier - Scrum
+2. Andres Cornelio - Integracion de Api
+3. Fernanda Jimenez - Cards de pociones
+4. Victor Olachea - Presentacion y Carusel
+5. Jairo Cortez - Header y contenedor de pago
+6. Carlos Ceballos - Fondo y tipo grafia
+7. Diana S - Cards 
+8. Marcela Collado - Navbar
+9. Ivan Mauricio - Carrusel de imagenes - Personajes 
+10. Rosario Champarro - Pregunta de bienvenida, reactividad y 
+11. Carmen Ramirez - HTML de carrito, estructura de la pagina
+12. Jose Eduardo Olan - Cards de hechisos para las tiendas
+
+
+
+Por hacer
+
+En desarollo
+
+En revision
+
+Concluido
