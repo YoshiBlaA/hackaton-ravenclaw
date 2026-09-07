@@ -1,0 +1,374 @@
+<style>
+
+    /* FUENTES */
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700&display=swap');
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+    body {
+        margin: 0;
+        background-color: #17274f;
+        font-family: "Cinzel", Georgia, serif;
+    }
+
+
+    /* =========================
+       PANTALLA DE PREGUNTA
+    ========================== */
+
+    #bienvenida {
+        min-height: 100vh;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 30px;
+
+        background-color: #17274f;
+    }
+
+
+    /* CAJA PRINCIPAL */
+
+    .caja-bienvenida {
+        width: 90%;
+        max-width: 950px;
+
+        padding: 60px;
+
+        text-align: center;
+
+        background-color: #17274f;
+
+        border: 3px solid #d6a62e;
+        border-radius: 20px;
+
+        box-shadow:
+            0 0 20px rgba(0, 0, 0, 0.5),
+            0 0 30px rgba(230, 173, 47, 0.15);
+    }
+
+
+    /* =========================
+       TÍTULO RAVENCLAW
+    ========================== */
+
+    h1 {
+        font-family: "Cinzel Decorative", Georgia, serif;
+
+        font-size: 65px;
+        font-weight: 900;
+
+        color: #b07d2d;
+
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        letter-spacing: 2px;
+
+        /* parecido al efecto de la imagen */
+        text-shadow:
+            1px 1px 0 #6f4b13,
+            2px 2px 2px rgba(0, 0, 0, 0.45);
+    }
+
+
+    /* FRASE DE RAVENCLAW */
+
+    .mensaje {
+        font-family: "Cinzel", Georgia, serif;
+
+        font-size: 24px;
+        font-style: italic;
+
+        letter-spacing: 3px;
+
+        color: #d6a62e;
+
+        margin-bottom: 45px;
+    }
+
+
+    /* =========================
+       PREGUNTA
+    ========================== */
+
+    .pregunta {
+        padding: 35px;
+
+        background-color: #ffffff;
+
+        border-radius: 15px;
+
+        margin-bottom: 30px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .pregunta h2 {
+        font-family: "Cinzel", Georgia, serif;
+
+        font-size: 30px;
+
+        color: #17274f;
+
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+
+    .pregunta p {
+        font-family: Arial, sans-serif;
+
+        font-size: 26px;
+
+        color: #222;
+
+        margin-bottom: 10px;
+    }
+
+
+    /* =========================
+       RESPUESTAS
+    ========================== */
+
+    h3 {
+        font-family: "Cinzel", Georgia, serif;
+
+        font-size: 27px;
+
+        color: #e6ad2f;
+
+        margin-bottom: 25px;
+    }
+
+
+    .respuestas {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+    }
+
+
+    .respuestas button {
+        min-height: 80px;
+
+        padding: 15px;
+
+        font-family: "Cinzel", Georgia, serif;
+
+        font-size: 22px;
+        font-weight: 700;
+
+        background-color: white;
+
+        color: #17274f;
+
+        border: 3px solid #d6a62e;
+
+        border-radius: 12px;
+
+        cursor: pointer;
+
+        transition: 0.25s;
+    }
+
+
+    .respuestas button:hover {
+        background-color: #d6a62e;
+
+        color: #17274f;
+
+        transform: scale(1.03);
+
+        box-shadow: 0 0 15px rgba(230, 173, 47, 0.6);
+    }
+
+
+    /* =========================
+       RESULTADO
+    ========================== */
+
+    #resultado {
+        min-height: 50px;
+
+        margin-top: 30px;
+
+        padding: 15px;
+
+        font-family: Arial, sans-serif;
+
+        font-size: 24px;
+        font-weight: bold;
+
+        border-radius: 10px;
+    }
+
+
+    /* =========================
+       BOTÓN ENTRAR
+    ========================== */
+
+    #botonEntrar {
+        display: none;
+
+        margin-top: 20px;
+
+        padding: 18px 40px;
+
+        font-family: "Cinzel", Georgia, serif;
+
+        font-size: 21px;
+        font-weight: bold;
+
+        background-color: #d6a62e;
+
+        color: #17274f;
+
+        border: 2px solid #f1c75b;
+
+        border-radius: 10px;
+
+        cursor: pointer;
+
+        transition: 0.25s;
+    }
+
+
+    #botonEntrar:hover {
+        transform: scale(1.05);
+
+        background-color: #f0bd3d;
+
+        box-shadow: 0 0 20px rgba(230, 173, 47, 0.7);
+    }
+
+
+    /* =========================
+       MENSAJE DE BIENVENIDA
+    ========================== */
+
+    #mensajeBienvenida {
+        min-height: 100vh;
+        width: 100%;
+
+        justify-content: center;
+        align-items: center;
+
+        background-color: #17274f;
+
+        text-align: center;
+
+        color: white;
+
+        padding: 30px;
+    }
+
+
+    .bienvenida-final {
+        width: 85%;
+        max-width: 900px;
+
+        padding: 70px 50px;
+
+        border: 3px solid #d6a62e;
+
+        border-radius: 20px;
+
+        box-shadow:
+            0 0 25px rgba(0, 0, 0, 0.5),
+            0 0 30px rgba(230, 173, 47, 0.15);
+    }
+
+
+    .bienvenida-final h1 {
+        font-family: "Cinzel Decorative", Georgia, serif;
+
+        font-size: 70px;
+        font-weight: 900;
+
+        color: #b07d2d;
+
+        margin-bottom: 30px;
+
+        letter-spacing: 2px;
+
+        text-shadow:
+            1px 1px 0 #6f4b13,
+            2px 2px 2px rgba(0, 0, 0, 0.45);
+    }
+
+
+    .bienvenida-final h2 {
+        font-family: "Cinzel", Georgia, serif;
+
+        font-size: 34px;
+
+        color: #e6ad2f;
+    }
+
+
+    .bienvenida-final p {
+        font-family: Georgia, serif;
+
+        font-size: 24px;
+
+        line-height: 1.7;
+
+        color: white;
+    }
+
+
+    /* =========================
+       CELULAR
+    ========================== */
+
+    @media (max-width: 650px) {
+
+        #bienvenida {
+            padding: 15px;
+        }
+
+
+        .caja-bienvenida {
+            width: 100%;
+
+            padding: 35px 20px;
+        }
+
+
+        h1 {
+            font-size: 38px;
+            letter-spacing: 1px;
+        }
+        .mensaje {
+            font-size: 18px;
+        }
+        .pregunta {
+            padding: 25px 15px;
+        }
+        .pregunta h2 {
+            font-size: 24px;
+        }
+        .pregunta p {
+            font-size: 20px;
+        }
+        .respuestas {
+            grid-template-columns: 1fr;
+        }
+        .bienvenida-final h1 {
+            font-size: 40px;
+        }
+
+    }
+
+</style>
