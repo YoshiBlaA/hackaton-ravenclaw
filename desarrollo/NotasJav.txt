@@ -24,7 +24,6 @@ Por hacer
 Integracion de Tienda y Carrito de compras
 
 En desarollo
-10. Rosario Champarro - Pregunta de bienvenida, reactividad
 
 En revision
 9. Ivan Mauricio - Carrusel de imagenes - Personajes 
@@ -36,6 +35,7 @@ En revision
 7. Diana S - Cards 
 11. Carmen Ramirez - HTML de carrito, estructura de la pagina
 12. Jose Eduardo Olan - Cards de hechisos para las tiendas
+10. Rosario Champarro - Pregunta de bienvenida, reactividad
 
 Concluido
 6. Carlos Ceballos - Fondo y tipo grafia  
