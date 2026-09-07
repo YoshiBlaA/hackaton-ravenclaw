@@ -1,21 +1,19 @@
-import { API_HECHIZOS } from "./env.js";
-import { API_POCIONES } from "./env.js";
-import { API_PERSONAJES } from "./env.js";
+import { API_HECHIZOS, API_POCIONES, API_PERSONAJES } from './env.js';
 
 
-export async function getSpells(){
+async function getSpells(){
     const response = await fetch(API_HECHIZOS);
     const data = await response.json();
     console.log(data);
 }
 
-export async function getPotions(){
+async function getPotions(){
     const response = await fetch(API_POCIONES);
     const data = await response.json();
     console.log(data.data);
 }
 
-export async function getCharacters(){
+async function getCharacters(){
     const response = await fetch(API_PERSONAJES);
     const data = await response.json();
     console.log(data);
@@ -25,8 +23,8 @@ getSpells();
 getPotions();
 getCharacters();
 
-const { categories, products } = window.storeData;
-const { hogwartsStore } = window;
+const { storeData, hogwartsStore, ProductCard } = window;
+const { categories, products } = storeData;
 
 const categoryPicker = document.getElementById('categoryPicker');
 const storeApp = document.getElementById('storeApp');
