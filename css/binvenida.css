@@ -1,0 +1,245 @@
+ <style>
+        /* Ajusta correctamente tamaños y espacios */
+        * {
+            box-sizing: border-box;
+        }
+        /* Diseño general de la página */
+        body {
+            margin: 0;
+           /*background-color: #17274f; */
+            font-family: Georgia, "Times New Roman", serif;
+        }
+        /* Primera pantalla */
+        #bienvenida {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+           /* background-color: #17274f; */
+        }
+        /* Caja principal */
+        .caja-bienvenida {
+            width: 90%;
+            max-width: 950px;
+            padding: 60px;
+            text-align: center;
+            background-color: #17274f;
+            border: 3px solid #d6a62e;
+            border-radius: 20px;
+            box-shadow:
+                0 0 20px rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(230, 173, 47, 0.15);
+        }
+        /* Título Ravenclaw */
+        h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 65px;
+            font-weight: bold;
+            color: #b07d2d;
+            margin-top: 0;
+            margin-bottom: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow:
+                1px 1px 0 #6f4b13,
+                2px 2px 3px rgba(0, 0, 0, 0.45);
+        }
+        /* Frase debajo del título */
+        .mensaje {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 24px;
+            font-style: italic;
+            letter-spacing: 3px;
+            color: #d6a62e;
+            margin-bottom: 45px;
+        }
+        /* Caja blanca de la pregunta */
+        .pregunta {
+            padding: 35px;
+            background-color: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* Título de la pregunta */
+        .pregunta h2 {
+            font-size: 32px;
+            color: #17274f;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+
+        /* Texto de la pregunta */
+        .pregunta p {
+            font-family: Arial, sans-serif;
+            font-size: 26px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+
+        /* Título respuestas */
+        h3 {
+            font-size: 28px;
+            color: #e6ad2f;
+            margin-bottom: 25px;
+        }
+
+
+        /* Organiza respuestas en dos columnas */
+        .respuestas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+
+        /* Diseño de los botones */
+        .respuestas button {
+            min-height: 80px;
+            padding: 15px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
+            font-weight: bold;
+            background-color: white;
+            color: #17274f;
+            border: 3px solid #d6a62e;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        /* Efecto al pasar el mouse */
+        .respuestas button:hover {
+            background-color: #d6a62e;
+            color: #17274f;
+            transform: scale(1.03);
+            box-shadow:
+                0 0 15px rgba(230, 173, 47, 0.6);
+        }
+        /* Mensaje correcto o incorrecto */
+        #resultado {
+            min-height: 50px;
+            margin-top: 30px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        /* Botón entrar, oculto al principio */
+        #botonEntrar {
+            display: none;
+            margin-top: 20px;
+            padding: 18px 40px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 22px;
+            font-weight: bold;
+            background-color: #d6a62e;
+            color: #17274f;
+            border: 2px solid #f1c75b;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        /* Efecto botón entrar */
+        #botonEntrar:hover {
+            transform: scale(1.05);
+            background-color: #f0bd3d;
+            box-shadow:
+                0 0 20px rgba(230, 173, 47, 0.7);
+        }
+        /* Segunda pantalla, oculta al principio */
+        #mensajeBienvenida {
+            min-height: 100vh;
+            width: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background-color: #17274f;
+            color: white;
+            text-align: center;
+        }
+        /* Caja de bienvenida final */
+        .bienvenida-final {
+            width: 85%;
+            max-width: 900px;
+            padding: 70px 50px;
+            border: 3px solid #d6a62e;
+            border-radius: 20px;
+            box-shadow:
+                0 0 25px rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(230, 173, 47, 0.15);
+        }
+        /* Título segunda pantalla */
+        .bienvenida-final h1 {
+            font-size: 70px;
+            color: #b07d2d;
+            margin-bottom: 30px;
+        }
+       /* Bienvenida final */
+        .bienvenida-final h2 {
+            font-size: 35px;
+            color: #e6ad2f;
+            margin-bottom: 30px;
+        }
+        /* Texto de bienvenida */
+        .bienvenida-final p {
+            font-size: 24px;
+            line-height: 1.7;
+           color: white;
+        }
+        /* Botón para continuar al sitio */
+        #botonContinuar {
+            margin-top: 25px;
+            padding: 18px 40px;
+            font-size: 21px;
+            font-weight: bold;
+            background-color: #d6a62e;
+            color: #17274f;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        /* Adapta la página para celular */
+        @media (max-width: 650px) {
+            #bienvenida {
+                padding: 15px;
+            }
+            .caja-bienvenida {
+                width: 100%;
+               padding: 35px 20px;
+            }
+           h1 {
+                font-size: 38px;
+
+                letter-spacing: 2px;
+            }
+            .mensaje {
+                font-size: 18px;
+            }
+       .pregunta {
+                padding: 25px 15px;
+            }
+            .pregunta h2 {
+                font-size: 24px;
+            }
+            .pregunta p {
+                font-size: 20px;
+            }
+            .respuestas {
+                grid-template-columns: 1fr;
+            }
+            .bienvenida-final h1 {
+                font-size: 40px;
+            }
+            .bienvenida-final h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
