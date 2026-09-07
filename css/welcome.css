@@ -1,0 +1,13 @@
+@import url('https://cdnfonts.com');
+
+.titulo-magico {
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 3rem;
+    color: #946a2d; /* Color dorado clásico */
+}
+.nota-pergamino {
+    font-family: 'Eagle Lake', serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #5d5d5d; /* Tono gris */
+}
