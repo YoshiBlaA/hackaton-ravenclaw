@@ -43,34 +43,59 @@
         </div>
 
         <div id="payment-container" class="m-0 p-0 rounded p-4 m-4">
-            <h3 class="text">Resumen del pedido</h3>
-            <div class="order-summary">
-                <div class="subtotal">
-                    <p class="text">
-                        Subtotal (<span id="total-products">M</span> productos)
-                    </p>
-                    <p class="subtotal price">
-                        <span id="subtotal-number">X.a</span> galeones
-                    </p>
-                </div>
+            <div id="payment">
+                <h3 class="text">Resumen del pedido</h3>
+                <div class="order-summary">
+                    <div class="subtotal">
+                        <p class="text">
+                            Subtotal (<span id="total-products">M</span> productos)
+                        </p>
+                        <p class="subtotal price">
+                            <span id="subtotal-number">X.a</span> galeones
+                        </p>
+                    </div>
 
-                <div class="estimating_shipping">
-                    <p class="text">Costos de envío</p>
-                    <p class="shipping price">
-                        <span id="shipping-number">Y.b</span> galeones
-                    </p>
-                </div>
+                    <div class="estimating_shipping">
+                        <p class="text">Costos de envío</p>
+                        <p class="shipping price">
+                            <span id="shipping-number">Y.b</span> galeones
+                        </p>
+                    </div>
 
-                <div class="total mb-3">
-                    <p class="text">Total</p>
-                    <p class="total price">
-                        <span id="total-number">X.a + Y.b</span> galeones
-                    </p>
+                    <div class="total mb-3">
+                        <p class="text">Total</p>
+                        <p class="total price">
+                            <span id="total-number">X.a + Y.b</span> galeones
+                        </p>
+                    </div>
                 </div>
+                <button type="button" class="btn btn-dark p-3">Pagar</button>
             </div>
-            <button type="button" class="btn btn-dark p-3">Pagar</button>
-        </div>
 
+
+            <div id="user-form" class="hide">
+                <h3 class="text">Datos de entrega</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="direccion" name="address">
+                    </div>
+
+                    <div id="submit-btns">
+                        <button type="submit" class="btn btn-danger p-3">Cancelar</button>
+                        <button type="submit" class="btn btn-dark p-3">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
 
 
