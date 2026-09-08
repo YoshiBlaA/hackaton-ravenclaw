@@ -19,19 +19,19 @@ const catalog = [
     id: 1,
     name: "Taza RavenClaw",
     price: 300.00,
-    image: "/assets/taza.jpeg"
+    image: "./assets/taza.jpeg"
   },
   {
     id: 2,
     name: "Uniforme RavenClaw",
     price: 400.00,
-    image: "/assets/uniformeRavenclaw.jpg"
+    image: "./assets/uniformeRavenclaw.jpg"
   },
   {
     id: 3,
     name: "Puff",
     price: 600.00,
-    image: "/assets/puf.webp"
+    image: "./assets/puf.webp"
   }
 ];
 
