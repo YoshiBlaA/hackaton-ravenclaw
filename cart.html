@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!-- Encabezado con la ubicación actual y los enlaces de navegación -->
     <header class="container d-flex align-items-center justify-content-between">
         <div class="location">
             <div class="description">
@@ -23,25 +24,26 @@
 
         <div class="nav-actions d-flex gap-5">
             <a href="index.html" class="main">Ir a página principal</a>
-            <a href="#" class="login">Log In</a>
+            <a href="index.html" class="login">Log In</a>
         </div>
     </header>
 
     <main class="cart-container">
-        <!-- Secció de Catálogo / Productos disponibles -->
+        <!-- Sección del catálogo con los productos disponibles -->
         <div id="shop_layout-container">
             <section class="catalog-section">
-                <h2 class="section-subtitle">Productos Disponibles</h2>
+                <h2 class="section-subtitle">Productos Exclusivos</h2>
                 <div id="catalog-list" class="catalog-grid"></div>
             </section>
 
-            <!-- Sección del Carrito -->
+            <!-- Sección del carrito con los productos seleccionados -->
             <section class="cart-section">
                 <h1 class="cart-title">Carrito</h1>
                 <div id="cart-items-list" class="cart-items-list"></div>
             </section>
         </div>
 
+        <!-- Resumen del pedido y formulario de entrega -->
         <div id="payment-container" class="m-0 p-0 rounded p-4 m-4">
 
             <div id="payment">
@@ -52,50 +54,30 @@
                             Subtotal (<span id="total-products">M</span> productos)
                         </p>
                         <p class="subtotal price">
-                            <span id="subtotal-number">X.a</span> galeones
+                            <span id="subtotal-number">X.a</span> Galeones
                         </p>
                     </div>
 
                     <div class="estimating_shipping">
                         <p class="text">Costos de envío</p>
                         <p class="shipping price">
-                            <span id="shipping-number">Y.b</span> galeones
+                            <span id="shipping-number">Y.b</span> Galeones
                         </p>
                     </div>
 
                     <div class="total mb-3">
                         <p class="text">Total</p>
                         <p class="total price">
-                            <span id="total-number">X.a + Y.b</span> galeones
+                            <span id="total-number">X.a + Y.b</span> Galeones
                         </p>
                     </div>
-            <h3 class="text">Resumen del pedido</h3>
-            <div class="order-summary">
-                <div class="subtotal">
-                    <p class="text">
-                        Subtotal (<span id="total-products">M</span> productos)
-                    </p>
-                    <p class="subtotal price">
-                        <span id="subtotal-number">X.a</span> Galeones
-                    </p>
+                    <button type="button" class="btn btn-dark p-3">Pagar</button>
                 </div>
-
-                <div class="estimating_shipping">
-                    <p class="text">Costos de envío</p>
-                    <p class="shipping price">
-                        <span id="shipping-number">Y.b</span> Galeones
-                    </p>
-                </div>
-
-                <div class="total mb-3">
-                    <p class="text">Total</p>
-                    <p class="total price">
-                        <span id="total-number">X.a + Y.b</span> Galeones
-                    </p>
-                </div>
-                <button type="button" class="btn btn-dark p-3">Pagar</button>
             </div>
 
+
+
+            <!-- Formulario para introducir los datos de entrega -->
 
             <div id="user-form" class="hide">
                 <h3 class="text">Datos de entrega</h3>
@@ -123,7 +105,7 @@
     </main>
 
 
-
+    <!-- Scripts para cargar el carrito y gestionar sus acciones -->
     <script src="js/cart-storage.js"></script>
     <script src="js/cart.js"></script>
 </body>
