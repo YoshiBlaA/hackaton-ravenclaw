@@ -1,4 +1,4 @@
-function ProductCard({ title, text, image, amount, buttonText = 'Comprar' }) {
+function ProductCard({ title, text, image, amount, buttonText = 'Comprar', cartItem = null }) {
     const wrapper = document.createElement('div');
     wrapper.className = 'col-12 col-md-4';
 
@@ -55,6 +55,10 @@ function ProductCard({ title, text, image, amount, buttonText = 'Comprar' }) {
     };
 
     button.addEventListener('click', () => {
+      if (cartItem && window.RavenclawCart) {
+        window.RavenclawCart.addItem(cartItem);
+      }
+
         button.classList.remove('sparkling');
         void button.offsetWidth;
         button.classList.add('sparkling');

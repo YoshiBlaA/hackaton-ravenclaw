@@ -10,6 +10,11 @@
   --ravenclaw-accent: #213264;
 }
 
+
+.navbar {
+    font-family: 'Cinzel', 'Georgia', serif;
+}
+
 * {
   box-sizing: border-box;
 }
