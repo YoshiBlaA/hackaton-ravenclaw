@@ -47,41 +47,42 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="home.html" style="color: #946A2D;">
+                        <a class="nav-link" href="index.html" style="color: #946A2D;">
                             Bienvenida
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="store.html" style="color: #946A2D;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" style="color: #946A2D;">
                             Tienda
                         </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="store.html">Ver todo</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="store.html#category-varitas">Varitas</a></li>
+                            <li><a class="dropdown-item" href="store.html#category-hechizos">Hechizos</a></li>
+                            <li><a class="dropdown-item" href="store.html#category-pociones">Pociones</a></li>
+                        </ul>
                     </li>
 
                 </ul>
                 <!-- Buscador -->
                 <form class="d-flex mt-2 mt-lg-0" role="search">
-                    <input 
-                        id="buscador"
-                        class="form-control rounded-pill" 
-                        type="search"
-                        placeholder="Descubre la magia..." 
-                        aria-label="Buscar"
-                    >
-                    <button type="submit" class="btn" style="color:#946A2D !important; font-size: 1.28rem;">
+                    <input class="form-control rounded-pill" type="search" placeholder="Descubre la magia..." aria-label="Buscar">
+                    <button type="submit" class="btn" style="color: #946A2D; font-size: 1.2rem;">
                         <i class="bi bi-search"></i>
                     </button>
                 </form>
                 <!-- Carrito -->
-                <a href="cart.html" style="color: #946A2D !important;">
-                    <i class="bi bi-cart3" style="font-size: 1.5rem;"></i>
+                <a href="cart.html" class="fs-4" style="color: #946A2D;">
+                    <i class="bi bi-cart3"></i>
                 </a>
             </div>
         </div>
     </nav>
     <!-- Texto/Emblema central de la Casa -->
     <main>
-
         <div class="ravenclaw-crest">
             <h1>Ravenclaw</h1>
             <p>Ingenio, Aprendizaje, Sabiduría</p>

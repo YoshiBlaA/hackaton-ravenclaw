@@ -59,18 +59,16 @@ body {
 
 .descripcion-ravenclaw {
     max-width: 900px;
-
     margin: 50px auto;
     padding: 40px;
-
     /* Fondo oscuro transparente */
     background-color: rgba(0, 0, 0, 0.65);
 
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 15px;
-
     /* Sombra */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    font-family: 'Cinzel Decorative', sans-serif;
 }
 
 
@@ -80,17 +78,13 @@ body {
 
 .subtitulo-ravenclaw {
     color: white;
-
     font-family: "Cinzel Decorative", serif;
     font-size: 2.2rem;
     font-weight: 700;
-
     letter-spacing: 2px;
-
     text-shadow:
         2px 2px 4px black,
         0 0 8px rgba(255, 255, 255, 0.3);
-
     margin-bottom: 20px;
 }
 
@@ -198,6 +192,7 @@ body {
 }
 
 .flip-card-back h3 {
+  font-family: "Cinzel Decorative", serif;
   font-size: 1.4rem;
   margin-bottom: 15px;
   font-weight: bold;
@@ -205,6 +200,7 @@ body {
 }
 
 .flip-card-back p {
+  font-family: "Cinzel Decorative", serif;
   font-size: 0.95rem; /* Tamaño de letra ajustado */
   line-height: 1.4;
   margin: 0;

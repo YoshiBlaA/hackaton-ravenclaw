@@ -35,9 +35,6 @@
 
     <div class="container-fluid p-0">
 
-    
-
-
         <!-- ======================================== -->
         <!-- NAVBAR -->
         <!-- ======================================== -->
@@ -71,29 +68,37 @@
                                 Bienvenida
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="store.html" style="color: #946A2D;">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" style="color: #946A2D;">
                                 Tienda
                             </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="store.html">Ver todo</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="store.html#category-varitas">Varitas</a></li>
+                                <li><a class="dropdown-item" href="store.html#category-hechizos">Hechizos</a></li>
+                                <li><a class="dropdown-item" href="store.html#category-pociones">Pociones</a></li>
+                            </ul>
                         </li>
                     </ul>
 
                     <!-- Buscador -->
-                    <form class="d-flex mt-2 mt-lg-0" role="search">
+                    <form id="form-buscador" class="d-flex mt-2 mt-lg-0" role="search">
                         <input 
                             id="buscador"
                             class="form-control rounded-pill" 
                             type="search"
                             placeholder="Descubre la magia..." 
-                            aria-label="Buscar"
-                        >
-                        <button type="submit" class="btn" style="color:#946A2D !important; font-size: 1.28rem;">
+                            aria-label="Buscar">
+
+                        <button type="submit" class="btn" style="color: #946A2D; font-size: 1.2rem;">
                             <i class="bi bi-search"></i>
                         </button>
                     </form>
 
                     <!-- Carrito -->
-                    <a href="cart.html" class="ms-lg-3 fs-4" style="color: #946A2D;">
+                    <a href="cart.html" class="fs-4" style="color: #946A2D;">
                         <i class="bi bi-cart3"></i>
                     </a>
 
