@@ -23,8 +23,8 @@
         </div>
 
         <div class="nav-actions d-flex gap-5">
-            <a href="#" class="main">Ir a página principal</a>
-            <a href="#" class="login">Log In</a>
+            <a href="index.html" class="main">Ir a página principal</a>
+            <a href="index.html" class="login">Log In</a>
         </div>
     </header>
 
@@ -47,37 +47,38 @@
         <div id="payment-container" class="m-0 p-0 rounded p-4 m-4">
 
             <div id="payment">
-            <!-- Desglose de subtotal, envío y total -->
-                
-            <h3 class="text">Resumen del pedido</h3>
-            <div class="order-summary">
-                <div class="subtotal">
-                    <p class="text">
-                        Subtotal (<span id="total-products">M</span> productos)
-                    </p>
-                    <p class="subtotal price">
-                        <span id="subtotal-number">X.a</span> Galeones
-                    </p>
-                </div>
+                <h3 class="text">Resumen del pedido</h3>
+                <div class="order-summary">
+                    <div class="subtotal">
+                        <p class="text">
+                            Subtotal (<span id="total-products">M</span> productos)
+                        </p>
+                        <p class="subtotal price">
+                            <span id="subtotal-number">X.a</span> Galeones
+                        </p>
+                    </div>
 
-                <div class="estimating_shipping">
-                    <p class="text">Costos de envío</p>
-                    <p class="shipping price">
-                        <span id="shipping-number">Y.b</span> Galeones
-                    </p>
-                </div>
+                    <div class="estimating_shipping">
+                        <p class="text">Costos de envío</p>
+                        <p class="shipping price">
+                            <span id="shipping-number">Y.b</span> Galeones
+                        </p>
+                    </div>
 
-                <div class="total mb-3">
-                    <p class="text">Total</p>
-                    <p class="total price">
-                        <span id="total-number">X.a + Y.b</span> Galeones
-                    </p>
+                    <div class="total mb-3">
+                        <p class="text">Total</p>
+                        <p class="total price">
+                            <span id="total-number">X.a + Y.b</span> Galeones
+                        </p>
+                    </div>
+                    <button type="button" class="btn btn-dark p-3">Pagar</button>
                 </div>
-                <button type="button" class="btn btn-dark p-3">Pagar</button>
             </div>
 
 
+
             <!-- Formulario para introducir los datos de entrega -->
+
             <div id="user-form" class="hide">
                 <h3 class="text">Datos de entrega</h3>
                 <form>
