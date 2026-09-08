@@ -34,20 +34,31 @@ Concluido
 5. Jairo Cortez - Header y contenedor de pago
 11. Carmen Ramirez - HTML de carrito, estructura de la pagina - cart
 
------------------------------------------------
+------------------------------------------------------------------------------
 
 Sprint 2
 
-
 Por hacer
 Efectos Visutales 
+Musica en Home
+Clic con sonido
+Efectos al realizar cualquier Clic
 
 En desarollo
-Home - Victor, Marcela
-Cart y Store -Integracion de Tienda y Carrito de compras - Fer, Diana, Jose Ed, Jairo, Carmen
-Bienvenida - Andres , Carlos, Rosario, Ivan.
 
 En revision
+Bienvenida - Andres , Carlos, Rosario, Ivan.
+- Boton
+- Navbar (btn Home y Bienvenida)
+Cart y Store -Integracion de Tienda y Carrito de compras - Fer, Diana, Jose Ed, Jairo, Carmen
+-Navbar falta btn de carrito, btn de pagina principal mandar a home, bug de duplicidad
 
 Concluido            
-1. Javier - Organizacion de GitHUB, Codigo y desarollo
+Home - Victor, Marcela
+Javier - Organizacion de GitHUB, Codigo y desarollo
+
+--------------------------------------------------------------------------------
+
+Sprint 3
+
+Todos - Presentancion

@@ -148,6 +148,21 @@ async function buildStore() {
     if (categoryPicker.firstElementChild) {
         categoryPicker.firstElementChild.classList.add('is-active');
     }
+
+    // Ir a la categoría indicada en la URL (ej. store.html#category-pociones)
+    const target = location.hash.slice(1);
+    if (target) {
+        const section = document.getElementById(target);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            const categoryId = target.replace('category-', '');
+            const titulo = categories.find(c => c.id === categoryId)?.title;
+            document.querySelectorAll('.category-picker__button').forEach(btn => {
+                btn.classList.toggle('is-active', btn.textContent === titulo);
+            });
+        }
+    }
 }
 
 buildStore();
