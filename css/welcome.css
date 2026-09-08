@@ -1,488 +1,487 @@
  /* 1. Configuración del espacio y fondo mágico degradado */
  main,
  html {
-     margin: 0;
-     padding: 0;
-     width: 100%;
-     height: 100%;
-     /* overflow: hidden; */
-     background: linear-gradient(135deg, #0d1e4a, #213264, #000000);
-     background-size: 400% 400%;
-     animation: gradientMovement 15s ease infinite;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    background: linear-gradient(135deg, #0d1e4a, #213264, #000000);
+    background-size: 400% 400%;
+    animation: gradientMovement 15s ease infinite;
      /* display: flex;
     justify-content: center;
     align-items: center; */
-     font-family: 'Cinzel', 'Georgia', serif;
+    font-family: 'Cinzel Decorative', sans-serif;
  }
 
  /* Animación para el movimiento suave del fondo */
  @keyframes gradientMovement {
-     0% {
-         background-position: 0% 50%;
-     }
+    0% {
+        background-position: 0% 50%;
+    }
 
-     50% {
-         background-position: 100% 50%;
-     }
+    50% {
+        background-position: 100% 50%;
+    }
 
-     100% {
-         background-position: 0% 50%;
-     }
+    100% {
+        background-position: 0% 50%;
+    }
  }
 
  /* 2. Contenedor de partículas flotantes (Sabiduría/Magia) */
  .magic-particles {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     top: 0;
-     left: 0;
-     pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
  }
 
  .particle {
-     position: absolute;
-     bottom: -20px;
-     background: radial-gradient(circle, rgba(234, 180, 55, 1) 0%, rgba(148, 107, 45, 0) 70%);
-     /* Color Bronce/Oro */
-     border-radius: 50%;
-     animation: floatUp 8s infinite linear;
-     opacity: 0;
+    position: absolute;
+    bottom: -20px;
+    background: radial-gradient(circle, rgba(234, 180, 55, 1) 0%, rgba(148, 107, 45, 0) 70%);
+    /* Color Bronce/Oro */
+    border-radius: 50%;
+    animation: floatUp 8s infinite linear;
+    opacity: 0;
  }
 
  /* Generación de variaciones de partículas con CSS puro */
  .particle:nth-child(1) {
-     left: 10%;
-     width: 8px;
-     height: 8px;
-     animation-delay: 0s;
-     animation-duration: 6s;
- }
+    left: 10%;
+    width: 8px;
+    height: 8px;
+    animation-delay: 0s;
+    animation-duration: 6s;
+}
 
  .particle:nth-child(2) {
-     left: 25%;
-     width: 12px;
-     height: 12px;
-     animation-delay: 2s;
-     animation-duration: 9s;
-     background: #946a2d;
+    left: 25%;
+    width: 12px;
+    height: 12px;
+    animation-delay: 2s;
+    animation-duration: 9s;
+    background: #946a2d;
  }
 
  .particle:nth-child(3) {
-     left: 40%;
-     width: 6px;
-     height: 6px;
-     animation-delay: 4s;
-     animation-duration: 7s;
+    left: 40%;
+    width: 6px;
+    height: 6px;
+    animation-delay: 4s;
+    animation-duration: 7s;
  }
 
  .particle:nth-child(4) {
-     left: 55%;
-     width: 14px;
-     height: 14px;
-     animation-delay: 1s;
-     animation-duration: 11s;
+    left: 55%;
+    width: 14px;
+    height: 14px;
+    animation-delay: 1s;
+    animation-duration: 11s;
  }
 
  .particle:nth-child(5) {
-     left: 70%;
-     width: 10px;
-     height: 10px;
-     animation-delay: 5s;
-     animation-duration: 8s;
-     background: #5d5d5d;
+    left: 70%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 5s;
+    animation-duration: 8s;
+    background: #5d5d5d;
  }
 
  /* Plata */
  .particle:nth-child(6) {
-     left: 85%;
-     width: 5px;
-     height: 5px;
-     animation-delay: 3s;
-     animation-duration: 5s;
+    left: 85%;
+    width: 5px;
+    height: 5px;
+    animation-delay: 3s;
+    animation-duration: 5s;
  }
 
  @keyframes floatUp {
-     0% {
-         transform: translateY(0) translateX(0);
-         opacity: 0;
-     }
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
 
-     10% {
-         opacity: 0.6;
-     }
+    10% {
+        opacity: 0.6;
+    }
 
-     90% {
-         opacity: 0.6;
-     }
+    90% {
+        opacity: 0.6;
+    }
 
-     100% {
-         transform: translateY(-105vh) translateX(50px);
-         opacity: 0;
-     }
+    100% {
+        transform: translateY(-105vh) translateX(50px);
+        opacity: 0;
+    }
  }
 
  /* 3. Escudo o emblema central con efecto de respiración */
  .ravenclaw-crest {
-     position: relative;
-     z-index: 10;
-     text-align: center;
-     color: #eab437;
-     /* Bronce oficial */
-     text-shadow: 0 0 20px rgba(234, 180, 55, 0.6);
-     animation: pulse 4s ease-in-out infinite;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: #eab437;
+    /* Bronce oficial */
+    text-shadow: 0 0 20px rgba(234, 180, 55, 0.6);
+    animation: pulse 4s ease-in-out infinite;
  }
 
  .ravenclaw-crest h1 {
-     font-size: 3.5rem;
-     letter-spacing: 8px;
-     margin: 0;
-     text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 8px;
+    margin: 0;
+    text-transform: uppercase;
  }
 
  .ravenclaw-crest p {
-     color: #946a2d;
-     font-size: 1.2rem;
-     letter-spacing: 4px;
-     font-style: italic;
-     margin-top: 5px;
+    color: #946a2d;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    font-style: italic;
+    margin-top: 5px;
  }
 
  @keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 10px rgba(34, 47, 91, 0.8));
+    }
 
-     0%,
-     100% {
-         transform: scale(1);
-         filter: drop-shadow(0 0 10px rgba(34, 47, 91, 0.8));
-     }
-
-     50% {
-         transform: scale(1.03);
-         filter: drop-shadow(0 0 25px rgba(234, 180, 55, 0.4));
-     }
+    50% {
+        transform: scale(1.03);
+        filter: drop-shadow(0 0 25px rgba(234, 180, 55, 0.4));
+    }
  }
 
  /* Aqui empieza el codigo de Rosario */
  /* Ajusta correctamente tamaños y espacios */
  * {
-     box-sizing: border-box;
+    box-sizing: border-box;
  }
 
  /* Diseño general de la página */
  body {
-     margin: 0;
-     /*background-color: #17274f; */
-     /* font-family: Georgia, "Times New Roman", serif; */
+    margin: 0;
+    /*background-color: #17274f; */
+    /* font-family: Georgia, "Times New Roman", serif; */
  }
 
  /* Primera pantalla */
  #bienvenida {
-     min-height: 100vh;
-     width: 100%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding: 30px;
-     /* background-color: #17274f; */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    /* background-color: #17274f; */
  }
 
  /* Caja principal */
  .caja-bienvenida {
-     width: 90%;
-     max-width: 950px;
-     padding: 60px;
-     text-align: center;
-     background-color: #17274f;
-     border: 3px solid #d6a62e;
-     border-radius: 20px;
-     box-shadow:
-         0 0 20px rgba(0, 0, 0, 0.5),
-         0 0 30px rgba(230, 173, 47, 0.15);
+    width: 90%;
+    max-width: 950px;
+    padding: 60px;
+    text-align: center;
+    background-color: #17274f;
+    border: 3px solid #d6a62e;
+    border-radius: 20px;
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(230, 173, 47, 0.15);
  }
 
  /* Título Ravenclaw */
  h1 {
-     font-family: Georgia, "Times New Roman", serif;
-     font-size: 65px;
-     font-weight: bold;
-     color: #b07d2d;
-     margin-top: 0;
-     margin-bottom: 10px;
-     letter-spacing: 4px;
-     text-transform: uppercase;
-     text-shadow:
-         1px 1px 0 #6f4b13,
-         2px 2px 3px rgba(0, 0, 0, 0.45);
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+    color: #b07d2d;
+    margin-top: 0;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow:
+        1px 1px 0 #6f4b13,
+        2px 2px 3px rgba(0, 0, 0, 0.45);
  }
 
  /* Frase debajo del título */
  .mensaje {
-     font-family: Georgia, "Times New Roman", serif;
-     font-size: 24px;
-     font-style: italic;
-     letter-spacing: 3px;
-     color: #d6a62e;
-     margin-bottom: 45px;
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 3px;
+    color: #d6a62e;
+    margin-bottom: 45px;
  }
 
  /* Caja blanca de la pregunta */
  .pregunta {
-     padding: 35px;
-     background-color: white;
-     border-radius: 15px;
-     margin-bottom: 30px;
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 35px;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
  }
 
 
  /* Título de la pregunta */
  .pregunta h2 {
-     font-size: 32px;
-     color: #17274f;
-     margin-top: 0;
-     margin-bottom: 25px;
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-size: 32px;
+    color: #17274f;
+    margin-top: 0;
+    margin-bottom: 25px;
  }
 
 
  /* Texto de la pregunta */
  .pregunta p {
-     font-family: Arial, sans-serif;
-     font-size: 26px;
-     color: #222;
-     margin-bottom: 10px;
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-size: 26px;
+    color: #222;
+    margin-bottom: 10px;
  }
 
 
  /* Título respuestas */
  h3 {
-     font-size: 28px;
-     color: #e6ad2f;
-     margin-bottom: 25px;
+    font-size: 28px;
+    color: #e6ad2f;
+    margin-bottom: 25px;
  }
 
 
  /* Organiza respuestas en dos columnas */
  .respuestas {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: 20px;
- }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 
 
  /* Diseño de los botones */
  .respuestas button {
-     min-height: 80px;
-     padding: 15px;
-     font-family: Georgia, "Times New Roman", serif;
-     font-size: 23px;
-     font-weight: bold;
-     background-color: white;
-     color: #17274f;
-     border: 3px solid #d6a62e;
-     border-radius: 12px;
-     cursor: pointer;
-     transition: 0.25s;
+    min-height: 80px;
+    padding: 15px;
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    background-color: white;
+    color: #17274f;
+    border: 3px solid #d6a62e;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.25s;
  }
 
  /* Efecto al pasar el mouse */
  .respuestas button:hover {
-     background-color: #d6a62e;
-     color: #17274f;
-     transform: scale(1.03);
-     box-shadow:
-         0 0 15px rgba(230, 173, 47, 0.6);
+    background-color: #d6a62e;
+    color: #17274f;
+    transform: scale(1.03);
+    box-shadow:
+        0 0 15px rgba(230, 173, 47, 0.6);
  }
 
  /* Mensaje correcto o incorrecto */
  #resultado {
-     min-height: 50px;
-     margin-top: 30px;
-     padding: 15px;
-     font-family: Arial, sans-serif;
-     font-size: 24px;
-     font-weight: bold;
-     border-radius: 10px;
+    min-height: 50px;
+    margin-top: 30px;
+    padding: 15px;
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
  }
 
  /* Botón entrar, oculto al principio */
  #botonEntrar {
-     display: none;
-     margin-top: 20px;
-     padding: 18px 40px;
-     font-family: Georgia, "Times New Roman", serif;
-     font-size: 22px;
-     font-weight: bold;
-     background-color: #d6a62e;
-     color: #17274f;
-     border: 2px solid #f1c75b;
-     border-radius: 10px;
-     cursor: pointer;
-     transition: 0.25s;
+    display: none;
+    margin-top: 20px;
+    padding: 18px 40px;
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #d6a62e;
+    color: #17274f;
+    border: 2px solid #f1c75b;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
  }
 
  /* Efecto botón entrar */
  #botonEntrar:hover {
-     transform: scale(1.05);
-     background-color: #f0bd3d;
-     box-shadow:
-         0 0 20px rgba(230, 173, 47, 0.7);
+    transform: scale(1.05);
+    background-color: #f0bd3d;
+    box-shadow:
+        0 0 20px rgba(230, 173, 47, 0.7);
  }
 
  /* Segunda pantalla, oculta al principio */
  #mensajeBienvenida {
-     min-height: 100vh;
-     width: 100%;
-     display: none;
-     justify-content: center;
-     align-items: center;
-     padding: 30px;
-     background-color: #17274f;
-     color: white;
-     text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #17274f;
+    color: white;
+    text-align: center;
  }
 
  /* Caja de bienvenida final */
  .bienvenida-final {
-     width: 85%;
-     max-width: 900px;
-     padding: 70px 50px;
-     border: 3px solid #d6a62e;
-     border-radius: 20px;
-     box-shadow:
-         0 0 25px rgba(0, 0, 0, 0.5),
-         0 0 30px rgba(230, 173, 47, 0.15);
+    font-family: 'Cinzel Decorative', sans-serif;   
+    width: 85%;
+    max-width: 900px;
+    padding: 70px 50px;
+    border: 3px solid #d6a62e;
+    border-radius: 20px;
+    box-shadow:
+        0 0 25px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(230, 173, 47, 0.15);
  }
 
  /* Título segunda pantalla */
  .bienvenida-final h1 {
-     font-size: 70px;
-     color: #b07d2d;
-     margin-bottom: 30px;
+    font-size: 70px;
+    color: #b07d2d;
+    margin-bottom: 30px;
  }
 
  /* Bienvenida final */
  .bienvenida-final h2 {
-     font-size: 35px;
-     color: #e6ad2f;
-     margin-bottom: 30px;
+    font-size: 35px;
+    color: #e6ad2f;
+    margin-bottom: 30px;
  }
 
  /* Texto de bienvenida */
  .bienvenida-final p {
-     font-size: 24px;
-     line-height: 1.7;
-     color: white;
+    font-size: 24px;
+    line-height: 1.7;
+    color: white;
  }
 
  /* Botón para continuar al sitio */
  #botonContinuar {
-     margin-top: 25px;
-     padding: 18px 40px;
-     font-size: 21px;
-     font-weight: bold;
-     background-color: #d6a62e;
-     color: #17274f;
-     border: none;
-     border-radius: 10px;
-     cursor: pointer;
+    font-family: 'Cinzel Decorative', sans-serif;
+    margin-top: 25px;
+    padding: 18px 40px;
+    font-size: 21px;
+    font-weight: bold;
+    background-color: #d6a62e;
+    color: #17274f;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
  }
 
  /* Adapta la página para celular */
  @media (max-width: 650px) {
-     #bienvenida {
-         padding: 15px;
-     }
+    #bienvenida {
+        padding: 15px;
+    }
 
-     .caja-bienvenida {
-         width: 100%;
-         padding: 35px 20px;
-     }
+    .caja-bienvenida {
+        width: 100%;
+        padding: 35px 20px;
+    }
 
-     h1 {
-         font-size: 38px;
+    h1 {
+        font-size: 38px;
 
-         letter-spacing: 2px;
-     }
+        letter-spacing: 2px;
+    }
 
-     .mensaje {
-         font-size: 18px;
-     }
+    .mensaje {
+        font-size: 18px;
+    }
 
-     .pregunta {
-         padding: 25px 15px;
-     }
+    .pregunta {
+        padding: 25px 15px;
+    }
 
-     .pregunta h2 {
-         font-size: 24px;
-     }
+    .pregunta h2 {
+        font-size: 24px;
+    }
 
-     .pregunta p {
-         font-size: 20px;
-     }
+    .pregunta p {
+        font-size: 20px;
+    }
 
-     .respuestas {
-         grid-template-columns: 1fr;
-     }
+    .respuestas {
+        grid-template-columns: 1fr;
+    }
 
-     .bienvenida-final h1 {
-         font-size: 40px;
-     }
+    .bienvenida-final h1 {
+        font-size: 40px;
+    }
 
-     .bienvenida-final h2 {
-         font-size: 26px;
-     }
+    .bienvenida-final h2 {
+        font-size: 26px;
+    }
  }
 
  body {
-     /* display: flex; */
-     /* padding: 20px; */
-     background: linear-gradient(135deg, #0d1e4a, #213264, #000000) !important;
-     /* gap: 20px; */
-     /* height: 100vh; */
+    background: linear-gradient(135deg, #0d1e4a, #213264, #000000) !important;
  }
 
  .cardsito {
-     height: 220px !important;
-     border: 2px solid #eab437 !important;
-     /* Borde dorado */
+    height: 220px !important;
+    border: 2px solid #eab437 !important;
+    /* Borde dorado */
  }
 
  /* Estilos generales para el footer */
  .ravenclaw-footer {
-     background-color: #0E1A40;
-     /* Azul oscuro oficial */
-     color: #946B2D;
-     /* Bronce oficial */
-     font-family: 'Georgia', serif;
-     padding: 30px 20px;
-     text-align: center;
-     border-top: 4px solid #946B2D;
-     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #0E1A40;
+    /* Azul oscuro oficial */
+    color: #946B2D;
+    /* Bronce oficial */
+    font-family: 'Cinzel Decorative', sans-serif;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 4px solid #946B2D;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
  }
 
  .footer-content {
-     max-width: 1200px;
-     margin: 0 auto;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     gap: 15px;
+    font-family: 'Cinzel Decorative', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
  }
 
  /* Lema o frase de la casa */
  .footer-quote {
-     font-style: italic;
-     font-size: 1.1rem;
-     color: #DAA520;
-     /* Dorado/bronce claro para resaltar */
-     margin: 0;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #DAA520;
+    /* Dorado/bronce claro para resaltar */
+    margin: 0;
  }
 
  /* Enlaces de navegación */
  .footer-links {
-     list-style: none;
-     padding: 0;
-     margin: 10px 0;
-     display: flex;
-     gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    gap: 20px;
  }
