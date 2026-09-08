@@ -99,8 +99,8 @@ function renderSummary() {
 
     totalProducts.textContent = totalQuantity;
     subtotalPrice.textContent = formatPrice(subtotal);
-    shippingPrice.textContent = formatPrice(shipping);
-    totalPrice.textContent = formatPrice(subtotal + shipping);
+    shippingPrice.textContent = 'ENVÍO GRATIS';
+    totalPrice.textContent = formatPrice(shipping);
 }
 
 /**
