@@ -15,24 +15,24 @@ const cartStorage = window.RavenclawCart;
 const SHIPPING_COST = 0;
 
 const catalog = [
-    {
-        id: 1,
-        name: "Weasleys' Wizard Wheezes Magnet",
-        price: 305.00,
-        image: "https://via.placeholder.com/140"
-    },
-    {
-        id: 2,
-        name: "Chocolate Frog",
-        price: 180.00,
-        image: "https://via.placeholder.com/140"
-    },
-    {
-        id: 3,
-        name: "Bertie Bott's Every Flavour Beans",
-        price: 220.00,
-        image: "https://via.placeholder.com/140"
-    }
+  {
+    id: 1,
+    name: "Taza RavenClaw",
+    price: 300.00,
+    image: "/assets/taza.jpeg"
+  },
+  {
+    id: 2,
+    name: "Uniforme RavenClaw",
+    price: 400.00,
+    image: "/assets/uniformeRavenclaw.jpg"
+  },
+  {
+    id: 3,
+    name: "Puff",
+    price: 600.00,
+    image: "/assets/puf.webp"
+  }
 ];
 
 /**
